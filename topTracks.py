@@ -15,7 +15,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="XXXX",
 # in Spotify (on a desktop) and hitting the "Share -> copy URI" option.
 DestPlaylistURI = 'spotify:playlist:XXXX'
 DestPlaylistID = 'XXXX'
-user = 'diversecity2014'
+user = 'USERNAME' # insert Spotify username
 
 
 
@@ -40,7 +40,7 @@ def getPopPlaylistSongs():
             artist = sp.artist(track['artists'][0]['id'])
             genres = artist['genres']
             # If track has a 73% popularity or better, add song to new playlist called 
-            # I also added a filter for country music, you can remove this by taking away the and statemtn and the code after
+            # I also added a filter for country music, you can remove this by taking away the and statement and the code after
             if track['popularity'] > 73 and 'contemporary country' not in genres:
                 sp.playlist_add_items(playlist_id=DestPlaylistURI, items=[track['uri']], position=None)
                 print(i, "Added: ->", idx+i2, track['artists'][0]['name'], "–", track['name'], "–",track['popularity'])
