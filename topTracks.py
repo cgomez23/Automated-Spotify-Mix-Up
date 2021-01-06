@@ -2,8 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 #Setup your own app on the Spotify Development site
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="227729d94cc840b98e795a4d29885e5a",
-                                               client_secret="4ba1f9d35d4c43029d8cc041705528e8",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="XXXX",
+                                               client_secret="XXXX",
                                                redirect_uri="https://example.com/callback/",
                                                scope="user-library-read playlist-modify-private \
                                                         playlist-modify \
@@ -11,10 +11,10 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="227729d94cc840b98e795a
                                                         playlist-read-collaborative \
                                                         user-top-read")) # Permissions needed to modify
                                                                          # your playlists
-# These can be obtained by right clicking on a playlist
-# in Spotify (on a desktop) and hitting the "Share -> copy URI".
-DestPlaylistURI = 'spotify:playlist:5rLUtwECq9xqptuFQR8P1b'
-DestPlaylistID = '5rLUtwECq9xqptuFQR8P1b'
+# These can be obtained by right clicking on your newly created playlist for this project
+# in Spotify (on a desktop) and hitting the "Share -> copy URI" option.
+DestPlaylistURI = 'spotify:playlist:XXXX'
+DestPlaylistID = 'XXXX'
 user = 'diversecity2014'
 
 
